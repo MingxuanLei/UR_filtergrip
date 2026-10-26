@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "note": "仅为离线调试示例，六轴限值、任务容差及 TCP 必须按实际设备和工艺核对；不表示可直接回放。",
+  "limits_confirmed": false,
+  "task_tolerances_confirmed": false,
+  "model": {
+    "name": "UR5e nominal DH, same as ur_pose_ui.py",
+    "tcp_xyz_rotvec": [0, 0, 0, 0, 0, 0]
+  },
+  "limits": {
+    "q_min": [-6.283185307, -6.283185307, -6.283185307, -6.283185307, -6.283185307, -6.283185307],
+    "q_max": [6.283185307, 6.283185307, 6.283185307, 6.283185307, 6.283185307, 6.283185307],
+    "v_max": [2, 2, 2, 2, 2, 2],
+    "a_max": [4, 4, 4, 4, 4, 4],
+    "j_max": [100, 100, 100, 100, 100, 100]
+  },
+  "task": {
+    "free_position_mm": 20,
+    "free_orientation_deg": 8,
+    "critical_position_mm": 2,
+    "critical_orientation_deg": 1,
+    "lift_position_mm": 5,
+    "lift_orientation_deg": 2,
+    "close_window_before_s": 0.3,
+    "close_window_after_s": 0.5,
+    "placement_before_s": 0.5,
+    "placement_after_s": 1,
+    "check_auto_lift": true,
+    "freeze_tail": false,
+    "min_tcp_z_m": null,
+    "clearance_window_s": null
+  },
+  "boundary": {
+    "start_velocity": null,
+    "end_velocity": null,
+    "start_acceleration": null,
+    "end_acceleration": null
+  },
+  "optimizer": {
+    "knot_spacing_s": 0.2,
+    "max_cpu_seconds": 120,
+    "max_iterations": 400,
+    "refinement_rounds": 1,
+    "validation_substeps": 2,
+    "max_joint_deviation_rad": [0.25, 0.25, 0.25, 0.25, 0.25, 0.25],
+    "jerk_scale": [100, 100, 100, 100, 100, 100],
+    "weights": {
+      "reference": 5,
+      "velocity": 0.02,
+      "acceleration": 1,
+      "jerk": 0.5
+    }
+  }
+}
