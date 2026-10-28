@@ -1,0 +1,20 @@
+{
+  "type": "ur5e_visual_teach_task",
+  "version": 1,
+  "created_at": "2026-10-28T22:53:04",
+  "npz_file": "original.npz",
+  "reference_file": "reference.json",
+  "npz_sha256": "dcb6d2a68b227973874bcd8503eb3d0137f940a673af62affaf449df39791df8",
+  "reference_sha256": "30c296c6f61ab51b782938cc1e718696fc25391e8284a855ea604dcd49462843",
+  "source_npz_name": "teach_20261027_204515.npz",
+  "source_reference_name": "reference_20261027_204341_052526.json",
+  "reference_center_base_m": [
+    -0.1495932681180694,
+    -0.4895745787710366,
+    0.37872266163108964
+  ],
+  "reference_yaw_deg_mod90": -4.186295017383742,
+  "camera_serial": "261222078813",
+  "square_edge_mm": 80.0,
+  "binding_note": "请确认示教期间物体没有移动；仅创建文件配对，不声称相机/关节逐帧同步"
+}
