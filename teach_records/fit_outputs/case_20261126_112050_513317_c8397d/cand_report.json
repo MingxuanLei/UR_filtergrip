@@ -1,0 +1,163 @@
+{
+  "generated": true,
+  "discrete_pass": false,
+  "failures": [
+    {
+      "constraint": "acceleration_sampled",
+      "excess": 220.29600358009338,
+      "joint": 4,
+      "time_s": 36.32
+    },
+    {
+      "constraint": "jerk_sampled",
+      "excess": 55974.000895023346,
+      "joint": 4,
+      "time_s": 36.324
+    }
+  ],
+  "hull_certified": null,
+  "hull_failures": [],
+  "metrics": {
+    "velocity_peak": [
+      1.2793540954589844,
+      1.0087914680472487,
+      0.7879436016082764,
+      1.794368028640747,
+      0.8722096681594849,
+      0.645593806575826
+    ],
+    "velocity_rms": [
+      0.21064951823951483,
+      0.13793035923927377,
+      0.13926739763982102,
+      0.2582643164415762,
+      0.12549786230056081,
+      0.055339399944153427
+    ],
+    "acceleration_peak": [
+      159.91926193237305,
+      126.0989335059061,
+      98.49295020103455,
+      224.29600358009338,
+      109.02620851993561,
+      78.79706841301031
+    ],
+    "acceleration_rms": [
+      36.1697536246804,
+      23.421223135781425,
+      24.670605412189385,
+      45.47144095990082,
+      19.801954787025906,
+      9.747590514229708
+    ],
+    "jerk_peak": [
+      39979.81548309326,
+      31524.73337647652,
+      24623.237550258636,
+      56074.000895023346,
+      27256.552129983902,
+      19698.43140716437
+    ],
+    "jerk_rms": [
+      8458.315994263095,
+      5479.340467679641,
+      5766.829093556866,
+      10635.177127716712,
+      4625.018493389778,
+      2267.7063517682036
+    ]
+  },
+  "peak_ratios": {
+    "velocity": [
+      0.6396770477294922,
+      0.5043957340236244,
+      0.3939718008041382,
+      0.8971840143203735,
+      0.43610483407974243,
+      0.322796903287913
+    ],
+    "acceleration": [
+      39.97981548309326,
+      31.524733376476526,
+      24.623237550258636,
+      56.074000895023346,
+      27.256552129983902,
+      19.699267103252577
+    ],
+    "jerk": [
+      399.7981548309326,
+      315.2473337647652,
+      246.23237550258636,
+      560.7400089502335,
+      272.565521299839,
+      196.98431407164372
+    ]
+  },
+  "max_position_mm": 0.04992362020408938,
+  "max_orientation_deg": 0.028597897019149675,
+  "task_position_peak_ratio": 0.024495640904958833,
+  "task_orientation_peak_ratio": 0.028597897019149675,
+  "phase_errors": {
+    "free": {
+      "position_mm": 0.04992362020408938,
+      "orientation_deg": 0.028548399307914633,
+      "position_ratio": 0.002496181010204469,
+      "orientation_ratio": 0.003568549913489329
+    },
+    "pick": {
+      "position_mm": 0.048991281809917665,
+      "orientation_deg": 0.028597897019149675,
+      "position_ratio": 0.024495640904958833,
+      "orientation_ratio": 0.028597897019149675
+    },
+    "lift": {
+      "position_mm": 0.043598493770897695,
+      "orientation_deg": 0.02295552720165609,
+      "position_ratio": 0.00871969875417954,
+      "orientation_ratio": 0.011477763600828046
+    },
+    "place": {
+      "position_mm": 0.02066299992350485,
+      "orientation_deg": 0.00392185979244599,
+      "position_ratio": 0.010331499961752425,
+      "orientation_ratio": 0.00392185979244599
+    }
+  },
+  "max_candidate_deviation_rad": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "candidate_deviation_ratios": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "endpoint_error_rad": 0.0,
+  "boundary_errors": {},
+  "boundary_derivative_rule": "one-sided common differences",
+  "tool0_lift_min_mm": 30.204999246174978,
+  "jerk_normalized_rms": 67.63417281150714,
+  "jerk_normalization": "j_max",
+  "analytic_sampled_peaks": {},
+  "control_hull_peaks": {},
+  "checked_task_samples": 10378,
+  "evaluation_seconds": 0.02596800005994737,
+  "task_interpolation": "piecewise-linear joints for common task checks only",
+  "replay_ready": false,
+  "limits_confirmed": false,
+  "task_tolerances_confirmed": false,
+  "numeric_allowance": {
+    "position_m": 2e-06,
+    "orientation_rad": 2e-06,
+    "joint": 1e-05
+  },
+  "processing_seconds": 0.0,
+  "common_seconds": 2.9243489999789745
+}

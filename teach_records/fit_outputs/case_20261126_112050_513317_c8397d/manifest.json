@@ -1,0 +1,29 @@
+{
+  "case_id": "case_20261126_112050_513317_c8397d",
+  "method": "compare",
+  "requested_methods": [
+    "candidate",
+    "fit",
+    "optimize"
+  ],
+  "source_hashes": {
+    "source": "fe87bbbc3f450238724fa3c4b66d5f101ab2c9362a5133ba72d103ce51a07a59",
+    "reference": "ba6152110640a90c8d468b9d2c57f3202f50d9a710c5185f541cb61bbb456af5",
+    "detection": "cf333b7bf13d688a1fecd176acb7a1e429ba052e7f02d10786629ad9a7442abd"
+  },
+  "replay_ready": false,
+  "branches": {
+    "candidate": {
+      "generated": true,
+      "discrete_pass": false
+    },
+    "fit": {
+      "generated": true,
+      "discrete_pass": true
+    },
+    "optimize": {
+      "generated": true,
+      "discrete_pass": true
+    }
+  }
+}

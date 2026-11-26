@@ -1,0 +1,72 @@
+{
+  "source_trajectory": "D:\\Users\\lmxlegion\\Desktop\\My personal project\\UR_filtergrip\\teach_records\\teach_20261118_223717.npz",
+  "source_sha256": "fe87bbbc3f450238724fa3c4b66d5f101ab2c9362a5133ba72d103ce51a07a59",
+  "robot_ip": "192.168.3.15",
+  "rtde_control_frequency_hz": 125.0,
+  "source_frames": 5189,
+  "source_duration_s": 41.5,
+  "master_pv_velocity_rad_s": 1.0,
+  "tool_kp": 3.0,
+  "tool_kd": 0.15,
+  "takeover_enabled": true,
+  "takeover_torque_threshold_scale": 2.0,
+  "servo_lookahead_s": 0.1,
+  "servo_gain": 300,
+  "schema_version": 1,
+  "condition_name": "case01",
+  "created_at": "2026-11-19T20:53:09.965740+08:00",
+  "units": {
+    "time": "s",
+    "position": "rad",
+    "velocity": "rad/s",
+    "acceleration": "rad/s^2"
+  },
+  "rtde_receive_frequency_hz": 50.0,
+  "cache_poll_frequency_hz": 100.0,
+  "acceleration": {
+    "source": "estimated_from_actual_qd",
+    "method": "local_quadratic_velocity_derivative",
+    "window_s": 0.1,
+    "segment_edges": "NaN",
+    "gap_threshold_s": 0.06
+  },
+  "host_clock": "time.perf_counter; host_elapsed_s is relative to record start",
+  "synchronization": "software timestamps; feedback and commands have separate time grids",
+  "end_reason": "completed",
+  "end_detail": "",
+  "events": [
+    {
+      "phase": "prepare_ur",
+      "host_elapsed_s": 0.005462100001750514
+    },
+    {
+      "phase": "prepare_master",
+      "host_elapsed_s": 1.7963306000019656
+    },
+    {
+      "phase": "replay",
+      "host_elapsed_s": 3.418128200002684
+    },
+    {
+      "phase": "settling",
+      "host_elapsed_s": 44.91905320000296
+    },
+    {
+      "phase": "settling",
+      "host_elapsed_s": 44.93533610000304
+    }
+  ],
+  "sample_count": 2263,
+  "command_count": 5189,
+  "status": "saved",
+  "complete": true,
+  "replay_sample_count": 2076,
+  "effective_sample_hz": 49.99999999999823,
+  "max_sample_interval_s": 0.020000000000436557,
+  "sampling_gap_count": 0,
+  "acceleration_valid_rows": 2255,
+  "duplicate_cache_reads": 1969,
+  "invalid_reads": 0,
+  "errors": [],
+  "finished_at": "2026-11-19T20:53:55.587798+08:00"
+}

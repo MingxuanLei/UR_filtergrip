@@ -87,7 +87,7 @@ class FitGui(legacy.OptGui):
         self.check_note = tk.StringVar(value="尚未计算。生成成功与检查通过分开显示；未获得包络证书不直接代表物理不可行。")
         self._layout_label(self.check_tab, textvariable=self.check_note).pack(fill="x", padx=8, pady=12)
         self.check_tree.bind("<<TreeviewSelect>>", self.show_check_details)
-        self.save_png_check.configure(text="保存对照 PNG（轨迹 + 六轴曲线）")
+        self.save_png_check.configure(text="保存对照 PNG（轨迹、六轴曲线、夹爪事件）")
 
     def on_spacing_changed(self, *_):
         self.invalidate()
@@ -354,6 +354,14 @@ class FitGui(legacy.OptGui):
         self.canvas = FigureCanvasTkAgg(core.trajectory_figure(result), master=self.preview_tab)
         self.canvas.draw()
         self.canvas.get_tk_widget().pack(fill="both", expand=True)
+
+    def show_gripper_plot(self, result):
+        from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+        if self.gripper_canvas:
+            self.gripper_canvas.get_tk_widget().destroy()
+        self.gripper_canvas = FigureCanvasTkAgg(core.gripper_figure(result), master=self.gripper_tab)
+        self.gripper_canvas.draw()
+        self.gripper_canvas.get_tk_widget().pack(fill="both", expand=True)
 
     def close(self):
         if self.busy and self._saving:

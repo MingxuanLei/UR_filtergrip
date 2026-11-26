@@ -413,6 +413,59 @@ def trajectory_figure(result):
     return fig
 
 
+def gripper_figure(result):
+    """Plot the common gripper signals, event times and compensation profile."""
+    from matplotlib.figure import Figure
+
+    fig = Figure(figsize=(10.7, 4.8), dpi=95)
+    ax = fig.add_subplot(111)
+    times = result["gripper_time"]
+    ax.plot(times, result["gripper_target_curve"], color="#2678b5",
+            linewidth=1.25, label="Gripper target open")
+    ax.plot(times, result["gripper_actual_curve"], color="#26986c",
+            linewidth=1.25, alpha=.8, label="Gripper actual open")
+
+    event = result["gripper_event"]
+    if event is not None:
+        close_time = event["time_s"]
+        complete_time = result["stats"]["compensation_complete_time_s"]
+        ax.axvline(close_time, color="#c33b56", linestyle="--",
+                   label=f"Close onset {close_time:.2f}s")
+        ax.axvline(complete_time, color="#d28b27", linestyle=":", linewidth=2,
+                   label=f"Compensation done {complete_time:.2f}s")
+
+    stages = result.get("staged_boundaries")
+    if stages:
+        cycle = stages["cycle"]
+        return_start, return_end = stages["return_start_s"], stages["return_end_s"]
+        for label, when, color in (
+            ("Closed stable", cycle["closed_time_s"], "#b65b15"),
+            ("Return start", return_start, "#b74a97"),
+            ("Return end", return_end, "#1e7491"),
+            ("Release start", cycle["open_time_s"], "#2b8b5a"),
+        ):
+            ax.axvline(when, color=color, linestyle="--", linewidth=1.1,
+                       label=f"{label} {when:.2f}s")
+        if cycle["opened_index"] >= 0:
+            opened_time = cycle["opened_time_s"]
+            ax.axvline(opened_time, color="#588f4e", linestyle=":", linewidth=1.1,
+                       label=f"Fully opened {opened_time:.2f}s")
+        ax.axvspan(return_start, return_end, color="#b74a97", alpha=.05)
+
+    ax.set(xlabel="Time (s)", ylabel="Open fraction (larger = more open)")
+    ax.grid(alpha=.2)
+    ax.legend(loc="upper left", fontsize=8)
+    ratio_ax = ax.twinx()
+    ratio_ax.plot(times, result["alpha_curve"], color="#9a69ca", alpha=.75,
+                  linewidth=1.5, label="Compensation ratio")
+    yaw = result.get("yaw_deg", 0.0)
+    ratio_ax.set_ylabel(f"Compensation ratio (Yaw = {yaw:+.1f} deg at 100%)")
+    ratio_ax.set_ylim(-.08, 1.08)
+    ratio_ax.legend(loc="upper right", fontsize=8)
+    fig.subplots_adjust(left=.07, right=.92, bottom=.14, top=.95)
+    return fig
+
+
 def save_bundle(result, output_dir, save_npz=True, save_png=True):
     """Atomic per-file saves; immutable case folder and hashes permit safe retries."""
     if not (save_npz or save_png):
@@ -479,6 +532,7 @@ def save_bundle(result, output_dir, save_npz=True, save_png=True):
         write("trajectory.png", lambda p: image(p, trajectory_figure(result)))
         for joint in range(6):
             write(f"joint_{joint+1}.png", lambda p, j=joint: image(p, joint_figure(result, j)))
+        write("gripper_events.png", lambda p: image(p, gripper_figure(result)))
     manifest = {"case_id": result["case_id"], "method": result["method"], "requested_methods": result["requested_methods"],
                 "source_hashes": result["job_snapshot"]["hashes"], "replay_ready": False,
                 "branches": {n: {"generated": result["variants"][n]["report"]["generated"],
