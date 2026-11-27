@@ -1,0 +1,163 @@
+{
+  "generated": true,
+  "discrete_pass": false,
+  "failures": [
+    {
+      "constraint": "acceleration_sampled",
+      "excess": 220.29600358009338,
+      "joint": 4,
+      "time_s": 36.32
+    },
+    {
+      "constraint": "jerk_sampled",
+      "excess": 55974.000895023346,
+      "joint": 4,
+      "time_s": 36.324
+    }
+  ],
+  "hull_certified": null,
+  "hull_failures": [],
+  "metrics": {
+    "velocity_peak": [
+      1.2793540954589844,
+      0.9980201721191406,
+      0.7879436016082764,
+      1.794368028640747,
+      1.0175069537892434,
+      0.7400818352753611
+    ],
+    "velocity_rms": [
+      0.19348604048368834,
+      0.15134458665021797,
+      0.14782553082823613,
+      0.2774107911149498,
+      0.14867193472527981,
+      0.07774945185976562
+    ],
+    "acceleration_peak": [
+      159.91926193237305,
+      127.42314198216366,
+      98.49295020103455,
+      224.29600358009338,
+      109.02620851993561,
+      92.51022940942015
+    ],
+    "acceleration_rms": [
+      32.45409671002792,
+      26.928317337325865,
+      25.920300767495853,
+      48.924840942144144,
+      18.967597808232586,
+      13.489384216699182
+    ],
+    "jerk_peak": [
+      39979.81548309326,
+      31742.16414143782,
+      24623.237550258636,
+      56074.000895023346,
+      27256.552129983902,
+      23127.557352355034
+    ],
+    "jerk_rms": [
+      7589.1808688365,
+      6297.605433469283,
+      6060.42087750876,
+      11441.972762901121,
+      4430.596077504895,
+      3142.0692973542555
+    ]
+  },
+  "peak_ratios": {
+    "velocity": [
+      0.6396770477294922,
+      0.4990100860595703,
+      0.3939718008041382,
+      0.8971840143203735,
+      0.5087534768946217,
+      0.37004091763768054
+    ],
+    "acceleration": [
+      39.97981548309326,
+      31.855785495540914,
+      24.623237550258636,
+      56.074000895023346,
+      27.256552129983902,
+      23.127557352355037
+    ],
+    "jerk": [
+      399.7981548309326,
+      317.4216414143782,
+      246.23237550258636,
+      560.7400089502335,
+      272.565521299839,
+      231.27557352355035
+    ]
+  },
+  "max_position_mm": 0.049977166327389334,
+  "max_orientation_deg": 0.028295641341276684,
+  "task_position_peak_ratio": 0.024988583163694667,
+  "task_orientation_peak_ratio": 0.028085639774847217,
+  "phase_errors": {
+    "free": {
+      "position_mm": 0.04991947596761706,
+      "orientation_deg": 0.028295641341276684,
+      "position_ratio": 0.002495973798380853,
+      "orientation_ratio": 0.0035369551676595855
+    },
+    "pick": {
+      "position_mm": 0.049977166327389334,
+      "orientation_deg": 0.028085639774847217,
+      "position_ratio": 0.024988583163694667,
+      "orientation_ratio": 0.028085639774847217
+    },
+    "lift": {
+      "position_mm": 0.04937227329856781,
+      "orientation_deg": 0.02087822527719962,
+      "position_ratio": 0.009874454659713563,
+      "orientation_ratio": 0.01043911263859981
+    },
+    "place": {
+      "position_mm": 0.0006603337748186691,
+      "orientation_deg": 8.049131469262597e-05,
+      "position_ratio": 0.0003301668874093345,
+      "orientation_ratio": 8.049131469262597e-05
+    }
+  },
+  "max_candidate_deviation_rad": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "candidate_deviation_ratios": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "endpoint_error_rad": 0.0,
+  "boundary_errors": {},
+  "boundary_derivative_rule": "one-sided common differences",
+  "tool0_lift_min_mm": 30.183337891835084,
+  "jerk_normalized_rms": 70.04828375799899,
+  "jerk_normalization": "j_max",
+  "analytic_sampled_peaks": {},
+  "control_hull_peaks": {},
+  "checked_task_samples": 10378,
+  "evaluation_seconds": 0.025374599965289235,
+  "task_interpolation": "piecewise-linear joints for common task checks only",
+  "replay_ready": false,
+  "limits_confirmed": false,
+  "task_tolerances_confirmed": false,
+  "numeric_allowance": {
+    "position_m": 2e-06,
+    "orientation_rad": 2e-06,
+    "joint": 1e-05
+  },
+  "processing_seconds": 0.0,
+  "common_seconds": 3.042111999937333
+}

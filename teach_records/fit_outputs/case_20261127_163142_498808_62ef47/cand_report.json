@@ -1,0 +1,163 @@
+{
+  "generated": true,
+  "discrete_pass": false,
+  "failures": [
+    {
+      "constraint": "acceleration_sampled",
+      "excess": 220.29600358009338,
+      "joint": 4,
+      "time_s": 36.32
+    },
+    {
+      "constraint": "jerk_sampled",
+      "excess": 55974.000895023346,
+      "joint": 4,
+      "time_s": 36.324
+    }
+  ],
+  "hull_certified": null,
+  "hull_failures": [],
+  "metrics": {
+    "velocity_peak": [
+      1.2793540954589844,
+      0.9980201721191406,
+      0.7879436016082764,
+      1.794368028640747,
+      0.9021923651391095,
+      0.5908208035240327
+    ],
+    "velocity_rms": [
+      0.1855764210012981,
+      0.14327083464057022,
+      0.14528491172970062,
+      0.2658666863101792,
+      0.12186181265890185,
+      0.05782861785638595
+    ],
+    "acceleration_peak": [
+      159.91926193237305,
+      127.35059874902436,
+      98.49295020103455,
+      224.29600358009338,
+      109.02620851993561,
+      75.37264608023894
+    ],
+    "acceleration_rms": [
+      32.211548088450456,
+      25.49895238545352,
+      25.498588005352165,
+      47.0304789730919,
+      17.704249712783813,
+      10.153829344433092
+    ],
+    "jerk_peak": [
+      39979.81548309326,
+      31724.028333152997,
+      24623.237550258636,
+      56074.000895023346,
+      27256.552129983902,
+      18841.003063715445
+    ],
+    "jerk_rms": [
+      7532.906405002363,
+      5963.86228969146,
+      5961.239211953444,
+      11000.081018721172,
+      4138.703085692405,
+      2363.44600085976
+    ]
+  },
+  "peak_ratios": {
+    "velocity": [
+      0.6396770477294922,
+      0.4990100860595703,
+      0.3939718008041382,
+      0.8971840143203735,
+      0.45109618256955475,
+      0.29541040176201633
+    ],
+    "acceleration": [
+      39.97981548309326,
+      31.83764968725609,
+      24.623237550258636,
+      56.074000895023346,
+      27.256552129983902,
+      18.843161520059734
+    ],
+    "jerk": [
+      399.7981548309326,
+      317.24028333152995,
+      246.23237550258636,
+      560.7400089502335,
+      272.565521299839,
+      188.41003063715445
+    ]
+  },
+  "max_position_mm": 0.04993412467469107,
+  "max_orientation_deg": 0.028032894540388483,
+  "task_position_peak_ratio": 0.024935929673987847,
+  "task_orientation_peak_ratio": 0.027485208957115516,
+  "phase_errors": {
+    "free": {
+      "position_mm": 0.04993412467469107,
+      "orientation_deg": 0.028032894540388483,
+      "position_ratio": 0.0024967062337345534,
+      "orientation_ratio": 0.0035041118175485604
+    },
+    "pick": {
+      "position_mm": 0.049871859347975694,
+      "orientation_deg": 0.027485208957115516,
+      "position_ratio": 0.024935929673987847,
+      "orientation_ratio": 0.027485208957115516
+    },
+    "lift": {
+      "position_mm": 0.049450698080060675,
+      "orientation_deg": 0.023237027525218452,
+      "position_ratio": 0.009890139616012135,
+      "orientation_ratio": 0.011618513762609226
+    },
+    "place": {
+      "position_mm": 0.016827970987881313,
+      "orientation_deg": 0.0025410100820717546,
+      "position_ratio": 0.008413985493940656,
+      "orientation_ratio": 0.0025410100820717546
+    }
+  },
+  "max_candidate_deviation_rad": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "candidate_deviation_ratios": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "endpoint_error_rad": 0.0,
+  "boundary_errors": {},
+  "boundary_derivative_rule": "one-sided common differences",
+  "tool0_lift_min_mm": 30.19362215134036,
+  "jerk_normalized_rms": 67.27620033711653,
+  "jerk_normalization": "j_max",
+  "analytic_sampled_peaks": {},
+  "control_hull_peaks": {},
+  "checked_task_samples": 10378,
+  "evaluation_seconds": 0.02676489995792508,
+  "task_interpolation": "piecewise-linear joints for common task checks only",
+  "replay_ready": false,
+  "limits_confirmed": false,
+  "task_tolerances_confirmed": false,
+  "numeric_allowance": {
+    "position_m": 2e-06,
+    "orientation_rad": 2e-06,
+    "joint": 1e-05
+  },
+  "processing_seconds": 0.0,
+  "common_seconds": 3.1642132999841124
+}

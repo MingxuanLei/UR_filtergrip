@@ -1,0 +1,72 @@
+{
+  "source_trajectory": "D:\\Users\\lmxlegion\\Desktop\\My personal project\\UR_filtergrip\\teach_records\\fit_outputs\\case_20261127_163917_566331_f25566\\opt.npz",
+  "source_sha256": "4aeddd200acdd8b46b1d244cf0f1e5d92cfeabbc3672176cca31bed9090a697a",
+  "robot_ip": "192.168.3.15",
+  "rtde_control_frequency_hz": 125.0,
+  "source_frames": 5189,
+  "source_duration_s": 41.504,
+  "master_pv_velocity_rad_s": 1.0,
+  "tool_kp": 3.0,
+  "tool_kd": 0.15,
+  "takeover_enabled": true,
+  "takeover_torque_threshold_scale": 2.0,
+  "servo_lookahead_s": 0.1,
+  "servo_gain": 300,
+  "schema_version": 1,
+  "condition_name": "case02",
+  "created_at": "2026-11-27T17:30:29.373909+08:00",
+  "units": {
+    "time": "s",
+    "position": "rad",
+    "velocity": "rad/s",
+    "acceleration": "rad/s^2"
+  },
+  "rtde_receive_frequency_hz": 50.0,
+  "cache_poll_frequency_hz": 100.0,
+  "acceleration": {
+    "source": "estimated_from_actual_qd",
+    "method": "local_quadratic_velocity_derivative",
+    "window_s": 0.1,
+    "segment_edges": "NaN",
+    "gap_threshold_s": 0.06
+  },
+  "host_clock": "time.perf_counter; host_elapsed_s is relative to record start",
+  "synchronization": "software timestamps; feedback and commands have separate time grids",
+  "end_reason": "completed",
+  "end_detail": "",
+  "events": [
+    {
+      "phase": "prepare_ur",
+      "host_elapsed_s": 0.002766299992799759
+    },
+    {
+      "phase": "prepare_master",
+      "host_elapsed_s": 1.7998151999199763
+    },
+    {
+      "phase": "replay",
+      "host_elapsed_s": 3.422911199973896
+    },
+    {
+      "phase": "settling",
+      "host_elapsed_s": 44.92846959992312
+    },
+    {
+      "phase": "settling",
+      "host_elapsed_s": 44.9442313000327
+    }
+  ],
+  "sample_count": 2260,
+  "command_count": 5189,
+  "status": "saved",
+  "complete": true,
+  "replay_sample_count": 2072,
+  "effective_sample_hz": 49.93368700265176,
+  "max_sample_interval_s": 0.03999999999996362,
+  "sampling_gap_count": 0,
+  "acceleration_valid_rows": 2252,
+  "duplicate_cache_reads": 1935,
+  "invalid_reads": 0,
+  "errors": [],
+  "finished_at": "2026-11-27T17:31:15.022867+08:00"
+}
